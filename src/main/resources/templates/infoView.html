@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strommix</title>
+    <link rel="stylesheet" href="css/mvp.css">
+</head>
+<body>
+<main>
+    <header>
+        <h1>Strommix</h1>
+        <p>© 2022 / Author: Ihr Name</p>
+    </header>
+    <form action="#" th:action="@{/strommix}" th:object="${datamodel}" method="post">
+        <h2>Woher kommt unser Strom?</h2>
+        <section>
+            <aside>
+                <label>Verteilung in %</label>
+                <img src="images/strommix.png" width="200" alt="strom mix">
+            </aside>
+            <aside>
+                <label>Was ist was?</label>
+                <label>Drücken Sie 1, 2 oder 3</label>
+                <button type="submit" name="numberbutton" value="one">1</button>
+                <button type="submit" name="numberbutton" value="two">2</button>
+                <button type="submit" name="numberbutton" value="three">3</button>
+                <label th:Text="${strommix}" />
+            </aside>
+        </section>
+    </form>
+</main>
+</body>
+</html>
